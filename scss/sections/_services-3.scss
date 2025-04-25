@@ -1,0 +1,86 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services 3 Section
+--------------------------------------------------------------*/
+.services-3 {
+  .service-item {
+    background: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+
+      .icon {
+        background: var(--accent-color);
+        transform: scale(1.1);
+
+        i {
+          color: var(--contrast-color);
+        }
+      }
+    }
+
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+      z-index: 1;
+      transform-origin: center;
+
+      i {
+        font-size: 1.75rem;
+        color: var(--accent-color);
+      }
+    }
+
+    h3 {
+      color: var(--heading-color);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 1.5rem;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent-color);
+
+      i {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: color-mix(in srgb, var(--accent-color), transparent 25%);
+
+        i {
+          transform: translateX(0.25rem);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-item {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

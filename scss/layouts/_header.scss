@@ -1,0 +1,61 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  --background-color: #f76000;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --contrast-color: #000000;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+
+  .logo {
+    // existing styles
+  }
+
+  .scrolled & {
+    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  }
+
+  // ✅ ADD THIS HERE
+  .logo-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1;
+
+    .bracket {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .hunter {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .underscore {
+      color: #ffffff;
+      font-weight: 400;
+    }
+
+    .strategy {
+      color: #ffffff;
+      font-weight: 400;
+    }
+  }
+}
+
+/* Global Header on Scroll
+------------------------------*/
+.scrolled .header {
+  --background-color: rgba(0, 0, 0, 0.85);
+}
